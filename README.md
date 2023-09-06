@@ -1,1 +1,1 @@
-This is a file that converts subtitles or CC from a .txt format to a .srt format
+This is a file that converts subtitles or CC from a .txt format to a .srt format. If you can get Adobe or another program to give you a txt format that isn't numbered, this might be an easier format to clean up before converting to .srt with this code.
