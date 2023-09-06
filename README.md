@@ -1,0 +1,1 @@
+This is a file that converts subtitles or CC from a .txt format to a .srt format
