@@ -18,21 +18,16 @@ with open('digital_physics_subtitles_short.srt', 'w') as f:
 
             if match:
                 start, end = match.groups()
-                # Use a positive lookahead assertion to match ":\*\*" only if "**" is the end of the string
                 pattern = r'(:\d{2})$' 
 
-                # Match frames placeholder   
                 match = re.search(r':(\d{2})$', start)
                 frames = int(match.group(1))
                 ms = int(round((frames / fps) * 1000, 0))
-                # start = start.replace(pattern, f',{ms:03}')
                 start = re.sub(pattern, f',{ms:03}', start)
 
-                # Match frames placeholder
                 match = re.search(r':(\d{2})$', end)
                 frames = int(match.group(1))
                 ms = int(round((frames / fps) * 1000, 0))
-                # end = end.replace(pattern, f',{ms:03}')
                 end = re.sub(pattern, f',{ms:03}', end)
 
                 line = start + ' --> ' + end + '\n'
